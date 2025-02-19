@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #E3CD69;
+}
+
+.container{
+   
+    height: 100%;
+
+}
+.header h1{
+    text-align: center;
+    margin: 8px;
+    padding: 20px;
+    color: #076c93;
+    font-size: 3rem;
+}  
+
+.show{
+   
+    margin: 2px 8px 3px 8px;
+    padding: 20px;
+    height: 80vh;
+}
+.input-box{
+   
+    padding: 8px;
+}
+
+.input-box input{
+    width: 70vh;
+    height: 6vh;
+    border-radius: 1.5rem;
+    border-color: lightgrey;
+    outline: none;
+    padding: 10px;
+    font-size: 2rem;
+    color: #076c93;
+
+}
+
+.msg{
+    
+    margin: 8px 0;
+    padding: 20px;
+    display: flex;
+}
+
+.delete-icon{
+    color: red;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 2rem;
+    border-radius: 1rem;
+
+}
+
+.complete-task{
+    color: green;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 2rem;
+    border-radius: 1rem;
+}
+
+#list{
+    width: 100%;
+}
+
+li{
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 5px;
+    color: black;
+    cursor: pointer;
+    width: 100%;
+    display: flex;  
+    justify-content: space-between; 
+}
+
+@media (max-width :380px ){
+    body{
+        font-size: .5rem;
+    }
+}
