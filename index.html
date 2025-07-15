@@ -9,17 +9,39 @@
 </head>
 <body>
     <div class="container">
-        <div class="header">
-        <h1>To-Do-List</h1></div>
-        <div class="show">
-            <div class="input-box">
-                <input type="text" class="inpt">
+        <div class="main">
+            <!-- Heading and Instruction to use this to do list -->
+            <div class="nav">
+               <div class="header">
+                <h1>To-Do-List</h1></div> 
+                <div class="instruction">
+                    <ul>
+                        <li>If you click Complete Button refers this work is done.</li>
+                        <li>If you click on Delete Button, This work is complete and you want to vanish this from the window.</li>
+                    </ul>
+                </div>
             </div>
-            <div class="msg">
-                <ul id="list">
-                </ul>            
+
+            <!-- taking input -->
+             
+            <div class="inputBox">
+                <div class="input-box">
+                    <input type="text" class="inpt">
+                </div>
             </div>
+
+            <!-- showing the results -->
+
+            <div class="show">
+                <div class="msg">
+                    <ul id="list">
+                    </ul>            
+                </div>
+            </div>
+
         </div>
+
+        
     </div>
     
     <script src="script.js"></script>

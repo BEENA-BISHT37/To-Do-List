@@ -1,88 +1,210 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    background-color: #E3CD69;
+    box-sizing: border-box;
+    background-color: rgb(200, 186, 169);
 }
 
-.container{
-   
+.container {
     height: 100%;
-
 }
-.header h1{
+
+.main {
+    height: 100%;
+    width: 100%;
+    margin: 4px;
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header {
+    width: 50%;
+}
+
+.header h1 {
     text-align: center;
     margin: 8px;
     padding: 20px;
-    color: #076c93;
-    font-size: 3rem;
-}  
-
-.show{
-   
-    margin: 2px 8px 3px 8px;
-    padding: 20px;
-    height: 80vh;
+    color: #093c51;
+    font-size: 6rem;
+    text-shadow: 2px 2px 4px #95d4ed;
 }
-.input-box{
-   
+
+.instruction {
+    width: 40%;
+    margin-top: 25px;
+}
+
+.instruction ul {
+    padding: 3px;
+}
+
+.instruction ul li {
+    font-size: 1rem;
+    color: #f33b2e;
+}
+
+.input-box {
     padding: 8px;
 }
 
-.input-box input{
-    width: 70vh;
+.input-box input {
+    width: 80%;
     height: 6vh;
     border-radius: 1.5rem;
-    border-color: lightgrey;
+    border: 1px solid lightgrey;
     outline: none;
     padding: 10px;
     font-size: 2rem;
     color: #076c93;
-
 }
 
-.msg{
-    
+.show {
+    padding: 20px;
+    height: 80vh;
+}
+
+.msg {
     margin: 8px 0;
     padding: 20px;
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
 }
 
-.delete-icon{
+.delete-icon,
+.complete-task {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 2rem;
+    border-radius: 1rem;
+    transition: transform 0.3s ease-out;
+}
+
+.delete-icon {
     color: red;
-    cursor: pointer;
-    font-weight: bold;
-    padding: 10px;
-    font-size: 2rem;
-    border-radius: 1rem;
-
 }
 
-.complete-task{
+.complete-task {
     color: green;
-    cursor: pointer;
-    font-weight: bold;
-    padding: 10px;
-    font-size: 2rem;
-    border-radius: 1rem;
 }
 
-#list{
+.delete-icon:hover,
+.complete-task:hover {
+    transform: scale(1.1);
+}
+
+#list {
     width: 100%;
 }
 
-li{
+li {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 300px));
+    gap: 10rem;
     font-size: 2rem;
     font-weight: bold;
     padding: 5px;
     color: black;
     cursor: pointer;
     width: 100%;
-    display: flex;  
-    justify-content: space-between; 
 }
 
-@media (max-width :380px ){
-    body{
-        font-size: .5rem;
+/* ---------------- Media Queries ---------------- */
+
+@media (max-width: 1310px) {
+    .header h1 {
+        font-size: 4.5rem;
+    }
+
+    li {
+        gap: 6rem;
+        font-size: 1.8rem;
+    }
+
+    .input-box input {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .header h1 {
+        font-size: 4.5rem;
+    }
+
+    li {
+        gap: 4rem;
+        font-size: 1.8rem;
+    }
+
+    .input-box input {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header,
+    .instruction {
+        width: 100%;
+        text-align: center;
+    }
+
+    .header h1 {
+        font-size: 3.5rem;
+    }
+
+    .input-box input {
+        width: 95%;
+        font-size: 1.5rem;
+    }
+
+    li {
+        gap: 3rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 2.5rem;
+    }
+
+    .instruction ul li {
+        font-size: 0.9rem;
+    }
+
+    .input-box input {
+        font-size: 1.2rem;
+        height: 5vh;
+    }
+
+    li {
+        gap: 1.5rem;
+        font-size: 1.2rem;
+    }
+
+    .delete-icon,
+    .complete-task {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 380px) {
+    body {
+        font-size: 0.5rem;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    li {
+        font-size: 1rem;
+        gap: 1rem;
     }
 }
